@@ -11,7 +11,7 @@
     <artifactId>db</artifactId>
     
     <properties>
-        <db.url>jdbc:postgresql://localhost/mpic-movies</db.url>
+        <db.url>jdbc:postgresql://localhost/emsim-server</db.url>
         <db.user>postgres</db.user>
         <db.password></db.password>
     </properties>
@@ -82,9 +82,8 @@
                                 <configuration>
                                     <changeLogFile>src/main/resources/liquibase/db.changelog.main.xml</changeLogFile>
                                     <driver>org.postgresql.Driver</driver>
-                                    <url>${db.url}</url>
-                                    <username>${db.user}</username>
-                                    <password>${db.password}</password>
+                                    <url>jdbc:postgresql://localhost/emsim-server</url>
+                                    <username>postgres</username>
                                 </configuration>
                                 <goals>
                                     <goal>update</goal>
