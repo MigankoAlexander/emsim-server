@@ -12,34 +12,32 @@ package edu.technolog.soapservice.config;
  */
 
 public class DbConfig {
-    private String driverClassName;
-    private String url;
-    private String user;
-
-    public DbConfig(String driverClassName, String url, String user) {
-        this.driverClassName = driverClassName;
-        this.url = url;
-        this.user = user;
-    }
-
-    public String getDriverClassName() {
-        return driverClassName;
+  public String getDriverClassName() {
+        return Configuration.get("db.driverClassName");
     }
 
     public String getUrl() {
-        return url;
+        return Configuration.get("db.url");
     }
 
     public String getUser() {
-        return user;
+        return Configuration.get("db.user");
+    }
+
+    public String getPassword() {
+        return Configuration.get("db.password");
+    }
+
+    public boolean isSchemaMigrationRequired() {
+        return Boolean.parseBoolean(Configuration.get("db.migrate"));
     }
 
     @Override
     public String toString() {
         return "DbConfig{" +
-                "driverClassName='" + driverClassName + '\'' +
-                ", url='" + url + '\'' +
-                ", user='" + user + '\'' +
+                "driverClassName='" + getDriverClassName() + '\'' +
+                ", url='" + getUrl() + '\'' +
+                ", user='" + getUser() + '\'' +
                 '}';
     }
 }    
