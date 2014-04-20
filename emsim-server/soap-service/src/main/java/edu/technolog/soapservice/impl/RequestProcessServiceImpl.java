@@ -26,7 +26,7 @@ import javax.jws.soap.SOAPBinding;
 @WebService(serviceName = "RequestProcess",
             portName = "RequestProcessPort",	
             endpointInterface = "edu.technolog.soapservice.RequestProcessService",
-            targetNamespace = "http://technolog.edu/jaxws/requestprocess",
+            targetNamespace = "http://wsdl2java",
             wsdlLocation = "RequestProcess.wsdl")
 //target\generated-sources\wsdl
 public class RequestProcessServiceImpl implements RequestProcessService{

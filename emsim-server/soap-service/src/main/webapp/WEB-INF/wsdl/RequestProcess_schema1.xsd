@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema version="1.0" targetNamespace="http://technolog.edu/jaxws/requestprocess" xmlns:tns="http://technolog.edu/jaxws/requestprocess" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema version="1.0" targetNamespace="http://wsdl2java" xmlns:tns="http://wsdl2java" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:element name="processRequest" type="tns:processRequest"/>
 

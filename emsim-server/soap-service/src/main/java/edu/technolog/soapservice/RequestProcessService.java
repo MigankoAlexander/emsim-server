@@ -16,7 +16,7 @@ import javax.jws.soap.SOAPBinding;
  * @author Администратор
  */
 
-@WebService(targetNamespace = "http://technolog.edu/jaxws/requestprocess")
+@WebService(targetNamespace = "http://wsdl2java")
 @SOAPBinding(style=SOAPBinding.Style.DOCUMENT,use=SOAPBinding.Use.LITERAL,
         parameterStyle=SOAPBinding.ParameterStyle.WRAPPED)
 

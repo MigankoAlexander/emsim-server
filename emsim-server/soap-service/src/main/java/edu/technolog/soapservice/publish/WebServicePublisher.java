@@ -5,8 +5,8 @@
  */
 package edu.technolog.soapservice.publish;
 
-import javax.xml.ws.Endpoint;
 import edu.technolog.soapservice.impl.RequestProcessServiceImpl;
+import javax.xml.ws.Endpoint;
 
 /**
  *
