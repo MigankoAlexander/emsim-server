@@ -9,23 +9,12 @@
     
     <groupId>edu.technolog</groupId>
     <artifactId>db</artifactId>
-    
-    <properties>
-        <db.url>jdbc:postgresql://localhost/emsim-server</db.url>
-        <db.user>postgres</db.user>
-        <db.password></db.password>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>edu.technolog</groupId>
             <artifactId>models</artifactId>
             <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.1-901.jdbc4</version>
         </dependency>
         <dependency>
             <groupId>org.jdbi</groupId>
@@ -40,6 +29,11 @@
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
             <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.3.175</version>
         </dependency>
         <!--TODO: move liqubase version-->
         <dependency>
@@ -59,37 +53,5 @@
             <version>2.4.9</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.3.175</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.liquibase</groupId>
-                <artifactId>liquibase-maven-plugin</artifactId>
-                <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <configuration>
-                            <changeLogFile>src/main/resources/liquibase/db.changelog.main.xml</changeLogFile>
-                            <driver>org.postgresql.Driver</driver>
-                            <url>jdbc:postgresql://localhost/emsim-server</url>
-                            <username>postgres</username>
-                        </configuration>
-                        <goals>
-                            <goal>update</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-     
-    
 </project>

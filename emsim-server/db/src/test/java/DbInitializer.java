@@ -20,7 +20,7 @@ import java.util.Properties;
  * @author Администратор
  */
 public class DbInitializer {
-     private static final String CHANGE_LOG = "liquibase/db.changelog.main.xml";
+    private static final String CHANGE_LOG = "liquibase/db.changelog.main.xml";
 
     private String dbDriverName;
     private String dbUrl;
